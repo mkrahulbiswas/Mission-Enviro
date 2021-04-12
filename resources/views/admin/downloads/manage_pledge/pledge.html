@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jspdf.umd.min.js"></script>
+    <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script> -->
+</head>
+
+<body>
+    <div class="mainDiv">
+        <div class="subDiv">
+            <span>pledge 1</span>
+            <div class="one common">
+                <div class="left">
+                    <img src="http://intelligentappsolutionsdemo.com/current-project/website/MissionEnviro/public/assets/images/footer1.png"
+                        alt="">
+                </div>
+                <div class="middle">
+                    <img src="http://intelligentappsolutionsdemo.com/current-project/website/MissionEnviro/public/assets/images/footer2.png"
+                        alt="">
+                </div>
+                <div class="right">
+                    <img src="http://intelligentappsolutionsdemo.com/current-project/website/MissionEnviro/public/assets/images/footer3.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="two common">
+                <p>I pledge to care about our planet and its ability to sustain life for future generations</p><br>
+                <p>I pledge to support clean energy and green alternatives</p><br>
+                <p>I pledge to practice ways to Reduce, Reuse and Recycle</p><br>
+                <p>I pledge to visualize positive change for our planet and our communities, and to share that vision with everyone I meet</p><br>
+                <p>I pledge to lead the people around me by example through my own thoughtful actions</p><br>
+                <p>I plede to live in harmony with the Earth, our only home.</p>
+            </div>
+            <div class="three common">
+                <div class="left">
+                    <p>Signature</p>
+                </div>
+                <div class="right">
+                    <p>Date</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mainDiv {
+        position: relative;
+        padding: 20px 25px 0 25px;
+    }
+
+    .mainDiv .subDiv {
+        background-color: #569311;
+        margin-top: 120px;
+    }
+
+    .mainDiv .subDiv span {
+        position: absolute;
+        left: 25px;
+        top: 115px;
+        text-transform: uppercase;
+        color: #569311;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+    .mainDiv .subDiv .common {}
+
+    .mainDiv .subDiv .one {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        height: 200px;
+        border-bottom: 3px solid #4e8412;
+    }
+
+    .mainDiv .subDiv .one .left img {
+        width: 200px;
+    }
+
+    .mainDiv .subDiv .one .middle img {
+        width: 200px;
+    }
+
+    .mainDiv .subDiv .one .right img {
+        width: 120px;
+    }
+
+    .mainDiv .subDiv .one .left {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translate(0%, -50%);
+        background-color: #fff;
+    }
+
+    .mainDiv .subDiv .one .middle {
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .mainDiv .subDiv .one .right {
+        position: absolute;
+        top: 50%;
+        right: 100px;
+        transform: translate(0%, -50%);
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .mainDiv .subDiv .two {
+        padding: 25px 80px;
+        border-bottom: 3px solid #4e8412;
+    }
+
+    .mainDiv .subDiv .two p {
+        color: #fff;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .mainDiv .subDiv .three {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 100px 20px 30px 20px;
+    }
+
+    .mainDiv .subDiv .three p {
+        border-top: 1px solid #fff;
+        width: 200px;
+        text-align: center;
+        color: #fff;
+        font-family: sans-serif;
+        padding: 5px 0 0 0;
+    }
+
+    .mainDiv .subDiv .three .left {
+        margin-left: 50px;
+    }
+
+    .mainDiv .subDiv .three .right {
+        margin-right: 50px;
+    }
+</style>
+
+<script>
+    var doc = new jsPDF();
+
+    doc.html(document.body, {
+        callback: function (doc) {
+            doc.save();
+        },
+        x: 10,
+        y: 10
+    });
+</script>
